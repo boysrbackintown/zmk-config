@@ -1,4 +1,4 @@
-#include <layouts/jorne.dtsi>
+#import "jorne.dtsi"
 
 &joric_jorne_full_layout {
     transform = <&jorne_transform>;
