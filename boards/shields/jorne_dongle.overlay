@@ -1,6 +1,6 @@
 #include <layouts/jorne.dtsi>
 
-&physical_layout0 {
+&joric_jorne_full_layout {
     transform = <&jorne_transform>;
 };
 
