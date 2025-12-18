@@ -21,15 +21,17 @@
 include:
   - board: nice_nano_v2
     shield: jorne_left
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    cmake-args: 
+    # build left side as peripheral, since dongle is the new central
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+
   - board: nice_nano_v2
     shield: jorne_right
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+
   - board: nice_nano_v2
     shield: settings_reset
+
   - board: seeeduino_xiao_ble
     shield: settings_reset
+
   - board: seeeduino_xiao_ble
     shield: jorne_dongle prospector_adapter
